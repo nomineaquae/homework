@@ -1,5 +1,31 @@
-/* Visually hide the real checkbox but keep it accessible */
-.maintain-login {
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+:root {
+    --blackAlpha10: rgba(0, 0, 0, 0.10);
+    --blackDark: #333;
+    --naverGreen: #03cf5d;
+    --silver: #999;
+    --silverLight: #DADADA;
+    --warningRed: #FF1414;
+    --white: #FFF;
+    --basic-text: #121212;
+    --focus-outline: #24388d;
+    --focus-background: #e9f0fd;
+    --text-size: 1rem;
+}
+
+body {
+    font-family: 'Spoqa Han Sans Neo', sans-serif;
+    font-size: var(--text-size);
+    color: var(--basic-text);
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 0 1.25rem;
+}
+
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
