@@ -1,0 +1,34 @@
+/* Visually hide the real checkbox but keep it accessible */
+.maintain-login {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Label that replaces the checkbox */
+.svg-toggle {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* 기본은 OFF만 보이게 */
+.svg-toggle .icon-on { display: none; }
+.svg-toggle .icon-off { display: inline; }
+
+/* 체크되면 ON 보이게 전환 */
+#check:checked + .svg-toggle .icon-on { display: inline; }
+#check:checked + .svg-toggle .icon-off { display: none; }
+
+/* 접근성: 키보드 포커스 표시 */
+#check:focus-visible + .svg-toggle,
+#check:focus + .svg-toggle { outline: 2px solid #4c9ffe; outline-offset: 2px; }
+
