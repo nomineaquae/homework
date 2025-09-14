@@ -1,3 +1,74 @@
 @import "./reset.css";
 @import "./theme.css";
 @import "./base.css";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    height: var(--size);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size : cover;
+    color: var(--white);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.card1 {
+    background-image: url("../products/ipad_pro.jpeg");
+}
+@media (min-resolution: 1dppx) {
+  .card1 {
+    background-image: url('../products/ipad_pro_2x.jpeg');
+    background-size: cover;
+  }
+}
+
+
+.product {
+    font-size: var(--large-text);
+    font-weight: bold;
+    margin-top: var(--large-spacing);
+    padding: var(--x-small-spacing);
+}
+
+.catchphrase {
+    font-size: var(--base-text);
+    padding: var(--x-small-spacing);
+}
+
+.release {
+    font-size: var(--small-text);
+    color: var(--gray);
+    padding: var(--x-small-spacing)  var(--small-spacing);
+    line-height: var(--line-normal);
+}
+
+.buttons {
+    display: inline-flex;
+    gap: var(--base-spacing);
+    padding: var(--x-small-spacing);
+}
+
+.info, .price {
+    border-radius: 1rem;
+    padding: var(--x-small-spacing);
+    font-size: var(--xx-small-text);
+}
+
+.info {
+    border: 0 none;
+    background-color: var(--blue-400);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.price {
+    border: 1px solid var(--blue-100);
+    background-color: transparent;
+    color: var(--blue-100);
+}
